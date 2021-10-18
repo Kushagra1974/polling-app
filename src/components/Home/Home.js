@@ -60,7 +60,6 @@ export default function Home() {
                         return data - 1;
                     }
                     if (data === 0) {
-                        console.log("hel[");
                         setActive((p) => {
                             const newactive = p.map((d, i) => {
                                 if (i === index) {
@@ -68,7 +67,6 @@ export default function Home() {
                                 }
                                 return d
                             })
-                            console.log(newactive)
 
                             return newactive;
                         });
@@ -79,8 +77,6 @@ export default function Home() {
             return newTimer;
         })
     }
-
-    console.log(timer)
 
     const disable = (i) => {
         setActive((prev) => {
@@ -94,7 +90,6 @@ export default function Home() {
     }
 
     const infavourHandler = (i) => {
-        console.log("infavour", i)
         disable(i);
         setCounters((prev) => {
             const newarr = prev.map((data, index) => {
@@ -110,7 +105,6 @@ export default function Home() {
     }
 
     const againstHandler = (i) => {
-        console.log("against", i)
         disable(i);
         setCounters((prev) => {
             return prev.map((data, index) => {

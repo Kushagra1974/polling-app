@@ -13,12 +13,10 @@ export function StatesProvider({ children }) {
     ]
 
     let localstore = localStorage.getItem("keys");
-    console.log(localstore)
     if (!localstore) {
         localStorage.setItem("keys", JSON.stringify(data))
     }
     localstore = JSON.parse(localstore);
-    console.log(localstore);
 
     const [counters, setCounters] = useState(localstore);
 
